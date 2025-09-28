@@ -143,18 +143,6 @@
             color: white;
         }
 
-        .badge.highlight {
-            background: rgba(255, 215, 0, 0.3);
-            border: 2px solid rgba(255, 215, 0, 0.8);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
         .cta-buttons {
             display: flex;
             gap: 1rem;
@@ -264,11 +252,6 @@
             background: linear-gradient(45deg, #667eea, #764ba2);
         }
 
-        .project-card.featured::before {
-            height: 6px;
-            background: linear-gradient(45deg, #ffd700, #ff8c00);
-        }
-
         .project-card:hover {
             transform: translateY(-15px);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
@@ -282,16 +265,6 @@
             display: flex;
             align-items: center;
             gap: 0.8rem;
-        }
-
-        .award-badge {
-            background: linear-gradient(45deg, #ffd700, #ff8c00);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-left: auto;
         }
 
         .project-description {
@@ -337,14 +310,6 @@
         .project-link:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-        }
-
-        .project-link.play-button {
-            background: linear-gradient(45deg, #ffd700, #ff8c00);
-        }
-
-        .project-link.play-button:hover {
-            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
         }
 
         /* Skills Section */
@@ -579,7 +544,6 @@
             <div class="achievement-badges">
                 <div class="badge">96th Percentile JEE Mains</div>
                 <div class="badge">Dean's List - 3.77 GPA</div>
-                <div class="badge highlight">🏆 1st Place Game Dev</div>
                 <div class="badge">95% Grade 10 | Perfect 4.0 in Core CS</div>
             </div>
 
@@ -595,29 +559,6 @@
     <section id="projects" class="section section-light">
         <h2 class="section-title fade-in">Featured Projects</h2>
         <div class="projects-grid">
-            <!-- Goblin Rush - Featured -->
-            <div class="project-card featured fade-in">
-                <h3 class="project-title">
-                    🎮 Goblin Rush 
-                    <span class="award-badge">1st Place</span>
-                </h3>
-                <p class="project-description">
-                    Award-winning interactive game built with p5.js for CSC 123 class. Features dynamic gameplay, 
-                    collision detection, sprite animations, and engaging user experience with smooth controls and 
-                    progressive difficulty that earned first place in competitive class showcase.
-                </p>
-                <div class="tech-stack">
-                    <span class="tech-tag">p5.js</span>
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">Game Physics</span>
-                    <span class="tech-tag">Creative Coding</span>
-                    <span class="tech-tag">Collision Detection</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://editor.p5js.org/jpf32005/sketches/Q6Z2gD0VZ" class="project-link play-button" target="_blank">Play Game</a>
-                </div>
-            </div>
-
             <!-- Finance Copilot -->
             <div class="project-card fade-in">
                 <h3 class="project-title">💰 Finance Copilot</h3>
@@ -659,6 +600,26 @@
                     <a href="https://github.com/NamishM123/quizbot" class="project-link" target="_blank">View Code</a>
                 </div>
             </div>
+
+            <!-- Goblin Rush removed as requested -->
+            <div class="project-card fade-in">
+                <h3 class="project-title">🧠 Machine Learning Projects</h3>
+                <p class="project-description">
+                    Collection of ML and data science projects focusing on algorithm implementation, data analysis, and 
+                    predictive modeling. Includes work with scikit-learn, data preprocessing pipelines, and statistical 
+                    analysis for real-world problem solving and academic research applications.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">scikit-learn</span>
+                    <span class="tech-tag">Data Analysis</span>
+                    <span class="tech-tag">Statistics</span>
+                    <span class="tech-tag">JSON Pipelines</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/NamishM123" class="project-link" target="_blank">View Projects</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -690,14 +651,11 @@
                 </div>
             </div>
             <div class="skill-category fade-in">
-                <h3>Frontend & Game Dev</h3>
+                <h3>Frontend & Frameworks</h3>
                 <div class="skills-list">
                     <span class="skill-item">React</span>
-                    <span class="skill-item">p5.js</span>
                     <span class="skill-item">HTML/CSS</span>
                     <span class="skill-item">JavaScript</span>
-                    <span class="skill-item">Game Physics</span>
-                    <span class="skill-item">Creative Coding</span>
                     <span class="skill-item">Responsive Design</span>
                     <span class="skill-item">UI/UX</span>
                 </div>
@@ -758,14 +716,6 @@
                 </div>
                 
                 <div class="achievement-card">
-                    <div class="achievement-icon">🎮</div>
-                    <div class="achievement-title">Game Development Champion</div>
-                    <div class="achievement-desc">
-                        First place winner in CSC 123 game development competition with Goblin Rush - showcasing creative coding and interactive design skills
-                    </div>
-                </div>
-                
-                <div class="achievement-card">
                     <div class="achievement-icon">⚡</div>
                     <div class="achievement-title">Technical Innovation</div>
                     <div class="achievement-desc">
@@ -787,16 +737,15 @@
                 <p>
                     My fascination with computational physics and artificial intelligence stems from their power to solve 
                     real-world problems through elegant mathematical solutions. Whether it's optimizing algorithms for 
-                    financial applications, implementing machine learning pipelines, designing scalable microservices, or 
-                    creating engaging interactive experiences through game development, I find immense satisfaction in 
-                    bridging theoretical computer science with practical applications.
+                    financial applications, implementing machine learning pipelines, or designing scalable microservices, 
+                    I find immense satisfaction in bridging theoretical computer science with practical applications.
                 </p>
                 <p style="margin-top: 1.5rem;">
                     At Cal Poly, I've consistently achieved academic excellence while working on projects that span from 
-                    AI-powered platforms to award-winning games and distributed systems. My approach combines rigorous 
-                    problem-solving with innovative thinking, always seeking to understand the underlying principles before 
-                    implementing solutions. This methodology has served me well in everything from acing competitive programming 
-                    challenges to building production-ready applications and winning game development competitions.
+                    AI-powered platforms to distributed systems. My approach combines rigorous problem-solving with 
+                    innovative thinking, always seeking to understand the underlying principles before implementing solutions. 
+                    This methodology has served me well in everything from acing competitive programming challenges to 
+                    building production-ready applications.
                 </p>
                 <p style="margin-top: 1.5rem;">
                     Beyond coding, I'm deeply interested in the intersection of physics and computation - exploring how 
